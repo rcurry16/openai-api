@@ -40,10 +40,10 @@ def image_gen(input):
   image_url = response.data[0].url
   print(image_url)  
 
-# function to generate text to speech, update filepath for personal use
+# function to generate text to speech, ** update filepath for personal use
 def voice_gen(text, filename):
   client = init_client()
-  speech_file_path = f"/Users/ryancurry/Desktop/{filename}.mp3"
+  speech_file_path = f"/{filename}.mp3"
   response = client.audio.speech.create(
     model="tts-1-hd",
     voice="onyx",
