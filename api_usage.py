@@ -40,7 +40,7 @@ def image_gen(input):
   image_url = response.data[0].url
   print(image_url)  
 
-# function to generate text to speech
+# function to generate text to speech, update filepath for personal use
 def voice_gen(text, filename):
   client = init_client()
   speech_file_path = f"/Users/ryancurry/Desktop/{filename}.mp3"
@@ -50,3 +50,13 @@ def voice_gen(text, filename):
     input=text
 )
   response.stream_to_file(speech_file_path)
+
+# example function calls
+# text_gen("Where does coffee come from?")
+# image_gen("a black cat drinking coffee")
+# voice_gen("Hello, I am calling you about your car warranty", "sample")
+
+# output formats
+# text_gen() - prints the response
+# image_gen() - prints the URL 
+# voice_gen() - saves an mp3 file
