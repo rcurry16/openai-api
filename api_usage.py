@@ -51,12 +51,25 @@ def voice_gen(text, filename):
 )
   response.stream_to_file(speech_file_path)
 
+# function to generate text from speech, ** update filepath for personal use
+def transcript_gen(filepath):
+  client = init_client()
+  audio_file= open(f"{filepath}", "rb")
+  transcript = client.audio.transcriptions.create(
+    model="whisper-1", 
+    file=audio_file,
+    response_format="text"
+)
+  print(transcript)
+
 # example function calls
 # text_gen("Where does coffee come from?")
 # image_gen("a black cat drinking coffee")
 # voice_gen("Hello, I am calling you about your car warranty", "sample")
+# transcript_gen("filepath")
 
 # output formats
 # text_gen() - prints the response
 # image_gen() - prints the URL 
 # voice_gen() - saves an mp3 file
+# transcript_gen() - prints the transcribed text

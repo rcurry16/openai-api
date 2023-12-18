@@ -11,6 +11,9 @@ Exploring the capabilities of the OpenAI API. The api_usage.py file contains thr
 - **Text-to-Speech Function**
   - To use the text-to-speech function, you must define a file path where the generated MP3 will be saved
 
+- **Speech-to-Text Function**
+  - To use the speech-to-text function, you must define a file path where the audio filed will be retrieved from
+
 ### Examples 
 - **text_gen(*input*)**
   - Example: text_gen('Where is coffee from?')
@@ -26,6 +29,11 @@ Exploring the capabilities of the OpenAI API. The api_usage.py file contains thr
   - Example: voice_gen('Hello, I would like to drink coffee', 'coffee')
   - Output format: Saves as an mp3
   - Note: There are other voice options in the documentation
+
+- **transcript_gen(*filepath*)**
+  - Example: transcript_gen('/Users/username/Desktop/audiofile.mp3')
+  - Output format: Prints the transcribed text
+  - Note: The are multiple response format options, text is currently chosen
 
 ### Useful Links
 - [OpenAI API Documentation](https://platform.openai.com/docs/overview)
