@@ -1,7 +1,7 @@
 ## OpenAI - API Usage
 
 ### Description
-Exploring the capabilities of the OpenAI API. The api_usage.py file contains three basic functions that demonstrate the usage of various tools provided by OpenAI.
+Exploring the capabilities of the OpenAI API. The api_usage.py file contains four basic functions that demonstrate the usage of various tools provided by OpenAI.
 
 ### Usage Instructions
 - **API Key**
