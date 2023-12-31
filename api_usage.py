@@ -24,6 +24,7 @@ def text_gen(input):
   ])
   
   print(completion.choices[0].message.content)
+  print(completion.usage)
 
 # function to generate text using dalle-3
 def image_gen(input):
