@@ -8,7 +8,7 @@ from pathlib import Path
 
 # function to intialize client and set up api key - need to fix
 def init_client():
-  api_key ='enter-api-key-here'
+  api_key ='ADDAPIKEYHERE'
   client = OpenAI(api_key=api_key)
   return client
 
@@ -17,7 +17,7 @@ def text_gen(input):
   client = init_client()
   
   completion = client.chat.completions.create(
-    model="gpt-3.5-turbo",
+    model="gpt-3.5-turbo-1106",
     messages=[
       {"role": "system", "content": "You are helpful assistant. Answer the given questions."},
       {"role": "user", "content": input}
@@ -34,7 +34,7 @@ def image_gen(input):
   model="dall-e-3",
   prompt=input,
   size="1024x1024",
-  quality="standard",
+  quality="hd",
   n=1,
   style="vivid")
 
